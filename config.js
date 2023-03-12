@@ -99,7 +99,7 @@ const goerli = {
     },
   },
   onStart: (services) =>
-    console.log(`Starting with these services: ${Object.keys(services)}`),
+    {},
 };
 
 const mainnet = {
@@ -156,9 +156,7 @@ const mainnet = {
     },
   },
   onStart: (services) =>
-    console.log(
-      `Starting Mainnet config with these services: ${Object.keys(services)}`
-    ),
+    {},
 };
 
 const arbitrum = {
@@ -189,7 +187,7 @@ const arbitrum = {
     },
   },
   onStart: (services) =>
-    console.log(`Starting with these services: ${Object.keys(services)}`),
+    {},
 };
 
 const arbitrumTestnet = {
@@ -220,15 +218,15 @@ const arbitrumTestnet = {
     },
   },
   onStart: (services) =>
-    console.log(`Starting with these services: ${Object.keys(services)}`),
+    {},
 };
 
 let config;
 if (process.env.VL_CONFIG_NAME === 'multi') {
-  console.log('Using Mainnet multi-chain config');
+  
   config = [mainnet, arbitrum];
 } else if (process.env.VL_CONFIG_NAME === 'multi_goerli') {
-  console.log('Using Goerli multi-chain config');
+  
   config = [goerli, arbitrumTestnet];
 }
 

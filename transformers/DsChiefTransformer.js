@@ -55,7 +55,7 @@ const handlers = {
 
     const row = await services.db.oneOrNone(vdQuery, [log.tx_id, log.log_index]);
     if (row) {
-      console.log('skipping chief.free event since it\'s already in the DB', row);
+      
       return;
     }
 
@@ -99,7 +99,7 @@ const handlers = {
 
     const row = await services.db.oneOrNone(vdQuery, [log.tx_id, log.log_index]);
     if (row) {
-      console.log('skipping chief.lock event since it\'s already in the DB', row);
+      
       return;
     }
 
